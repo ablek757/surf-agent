@@ -1,0 +1,52 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "surf-agent"
+version = "0.1.0"
+description = "Natural-language-driven browser automation powered by LLMs (Claude / OpenAI / Ollama) + Playwright."
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+authors = [{ name = "surf-agent contributors" }]
+keywords = ["browser-automation", "llm", "claude", "playwright", "agent", "natural-language"]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Internet :: WWW/HTTP :: Browsers",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+]
+dependencies = [
+    "playwright>=1.45",
+    "pydantic>=2.6",
+    "python-dotenv>=1.0",
+    "rich>=13.7",
+    "typer>=0.12",
+]
+
+[project.optional-dependencies]
+anthropic = ["anthropic>=0.40"]
+openai = ["openai>=1.40"]
+ollama = ["ollama>=0.3"]
+all = ["anthropic>=0.40", "openai>=1.40", "ollama>=0.3"]
+dev = ["pytest>=8", "pytest-asyncio>=0.23", "ruff>=0.5"]
+
+[project.scripts]
+surf-agent = "surf_agent.cli:app"
+
+[project.urls]
+Homepage = "https://github.com/ablek757/surf-agent"
+Issues = "https://github.com/ablek757/surf-agent/issues"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py310"

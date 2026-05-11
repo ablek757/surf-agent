@@ -1,0 +1,10 @@
+playwright>=1.45
+pydantic>=2.6
+python-dotenv>=1.0
+rich>=13.7
+typer>=0.12
+
+# Pick at least one LLM backend:
+anthropic>=0.40
+# openai>=1.40
+# ollama>=0.3

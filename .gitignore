@@ -1,0 +1,43 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.egg-info/
+*.egg
+build/
+dist/
+.eggs/
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+
+# Virtual environments
+.venv/
+venv/
+env/
+ENV/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+
+# Env / secrets
+.env
+.env.local
+*.key
+
+# Playwright
+playwright-report/
+test-results/
+.cache/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# surf-agent artifacts
+.surf-agent/
+traces/
+screenshots/
+*.trace.zip
