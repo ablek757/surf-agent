@@ -1,5 +1,7 @@
 # surf-agent 🏄
 
+> **English** · [中文](./README.zh.md)
+
 > **Drive a real browser with natural language.** Tell `surf-agent` what you
 > want done — *"find the cheapest flight from SFO to NRT next Tuesday"*,
 > *"register me for the talk"*, *"summarize my GitHub notifications"* — and an
@@ -202,17 +204,3 @@ PRs welcome. Please:
 ## 📄 License
 
 [MIT](LICENSE) © surf-agent contributors.
-
----
-
-## 中文简介
-
-**surf-agent** 是一个用自然语言驱动浏览器的智能体框架:
-
-- 你用一句话描述任务(*"在 Wikipedia 上搜索 Playwright,告诉我是谁在维护"*),
-- 框架把页面 DOM 提取成带编号的可交互元素列表,配合定期截图发送给 LLM,
-- LLM 返回结构化 JSON 动作(`click` / `type` / `goto` / ...),
-- Playwright 在真实浏览器里执行,直到任务完成。
-
-支持 Anthropic Claude、OpenAI、本地 Ollama 三种后端任意切换。详细使用方式见
-上方英文章节。
